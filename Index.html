@@ -1,0 +1,362 @@
+<html>
+    <head>
+        <style>
+            h1{
+    text-align:center;
+    color:#ff1515;
+}
+h3{
+    text-align:right;
+    color:green;
+}
+h4{
+    text-align:center;
+}
+p{
+    text-indent:40px;
+}
+table{
+    border:5px double green;
+    
+}
+th{
+    background-color:orange;
+}
+#a{
+    border:2px solid red;
+}
+        </style>
+    </head>
+    <body>
+        
+        <h3>Basic Symbols</h3>
+        <table border="5px double green" cellspacing="0" cellpadding="10" style="text-align:center;" id="arithmaticalOperators">
+            <tr>
+                <th>symbols</th>
+                <th>names</th>
+            </tr>
+            <tr>
+                <td>;</td>
+                <td>semicolon</td>
+            </tr>
+            <tr>
+                <td>:</td>
+                <td>semicolon</td>
+            </tr>
+            <tr>
+                <td>{ }</td>
+                <td>curly braces</td>
+            </tr>
+            <tr>
+                <td>( )</td>
+                <td>simple braces</td>
+            </tr>
+            <tr>
+                <td>[ ]</td>
+                <td>square braces</td>
+            </tr>
+            <tr>
+                <td>#</td>
+                <td>hashtag</td>
+            </tr>
+            <tr>
+                <td>%</td>
+                <td>percentage</td>
+            </tr>
+            <tr>
+                <td>\</td>
+                <td>slash</td>
+            </tr>
+            <tr>
+                <td>" "</td>
+                <td>double quotes</td>
+            </tr>
+            <tr>
+                <td>' '</td>
+                <td>single quotes</td>
+            </tr>
+            <tr>
+                <th style="background-color:skyblue" colspan="2">special symbol</th>                
+            </tr>
+            <tr>
+                <td>\n</td>
+                <td>new-line character</td>
+            </tr>
+            <tr>
+                <td>\t</td>
+                <td>tabular-form</td>
+            </tr>
+        </table><hr><br><br><br>
+        
+        <h3>printf();</h3>
+        <p>In C-programming printf() is used to print any statement. In the simple braces[( )] followed by printf keyword we write our statement within double quotes[" "]. After writing our statement we must terminate the sentence by using semicolon[ ; ] after closing the simple braces. </p>
+        <h4>printf(" statement to be print ");</h4>                   
+        <table border="5px">
+            <tr>
+                <td>#include< stdio.h ><br>void main()<br>{<br><br>printf(" <input type="text" placeholder="enter your statement" id="pwv" > ");<br><br>}<br><br><br><input type="submit" value="output" onclick="pwv()"></td>
+                <td>
+                    <h4>output</h4>
+                    <input type="text" id="output">
+                </td>
+            </tr>
+        </table>
+        <script>
+            function pwv()
+            {               
+                var print = document.getElementById("pwv").value;
+document.getElementById("output").value = print;
+            }
+        </script>
+        <hr><br> 
+        <mark>The semicolon[ ; ] is a special character used in C-language to terminate the following statement, it is also known as statement-terminator.</mark>
+        <p>apart from printing only statememts we can print value of a varible by using <a href="#formatSpecifier">format-specifiers<sup style="color:red;">**</sup></a> <mark>( to specify the datatype )</mark> within the double quotes [" "], and variableName outside the double quotes followed by a comma[ , ].</p>
+        <h4>printf(" %formatSpecifier ", variableName);</h4>             
+        <table border="5px"cellpadding="10">
+            <tr>
+                <td>#include< stdio.h ><br>void main()<br>{<br><br>int var1;<br>float var2;<br>char var3;<br>var1 = 56;<br>var2 = 23.46;<br>var3 = 'A';<br>printf("integer value = %d \nfloat value = %f \ncharacter value = %c",var1,var2,var3);<br><br>}<br><br></td>
+                <td>
+                    <h4>output</h4>
+                    integer value = 56<br>
+                    float value = 23.46<br>
+                    character value = A
+                </td>
+            </tr>
+        </table><hr><br><br><br>      
+        
+        <h3>clrscr();</h3>
+        <p>clrscr(); is an in-built fuction in C-language for clearing the output of the previous program run by the compiler. Before using clrscr(); we need to declare a new header file < conio.h > because, clrscr() is a built-in function in this header file.</p>
+        <table border="5px"cellpadding="10">
+            <tr>
+                <td>#include< stdio.h ><br>#include< conio.h ><br>void main()<br>{<br><br>int var1;<br>float var2;<br>char var3;<br>clrscr( );<br>var1 = 56;<br>var2 = 23.46;<br>var3 = 'A';<br>printf("integer value = %d \nfloat value = %f \ncharacter value = %c",var1,var2,var3);<br><br>}<br><br></td>
+                <td>
+                    <h4>output</h4>
+                    integer value = 56<br>
+                    float value = 23.46<br>
+                    character value = A
+                </td>
+            </tr>
+        </table><hr><br><br><br>      
+        
+        <h3>Variables</h3>
+        <p>In any C-program we typically do lots of calculations. The results of these calculations are stored in computer’s memory(Like human memory). The computer’s memory also consists of millions of cells. The calculated 
+values are stored in these memory cells. To make the retrieval and usage of these values easy, these memory cells(also called memory locations) are given names.</p> 
+         <p>Since the value stored in each location may change, the names given to these locations are called variable names.
+<mark>In simple words, Variables are containers for storing data values like number and characters and the name given to that variable are called variableName.</mark></p>
+         <caption>rules for creating variableNames</caption>
+         <ul style="color:red;">
+             <li>A variable name is any combination of 1 to 26 alphabets, digits or underscores.</li>
+<li>The first character in the variable name must be an alphabet or underscore ( _ ).</li>
+<li>No commas or blanks are allowed within a variable name.</li> 
+<li>No special symbol other than an underscore can be used in a variableName.</li>
+<li>Names can contain letters, digits and underscore.</li>
+<li>Names are case sensitive.</li>
+<li>Reserved keywords can not be used as names.</li>
+         </ul><hr><br><br><br>
+         
+         <h3>Keywords</h3>
+         <p>Keywords are the words whose meaning has already been explained to the C compiler (or in a broad sense to the computer). There are only 32 keywords available in C. <sup style="color:red;">**</sup>The keywords cannot be used as variable names.</p>
+         <table border="5px double green" cellspacing="0" width="300px" style="text-align:center;color:#ff2a15;">
+             <tr>
+                 <td>auto</td>
+                 <td>double</td>
+                 <td>int</td>
+                 <td>struct</td>
+             </tr>
+             <tr>
+                 <td>break</td>
+                 <td>else</td>
+                 <td>long</td>
+                 <td>switch</td>
+             </tr>
+             <tr>
+                 <td>register</td>
+                 <td>case</td>
+                 <td>enum</td>
+                 <td>typedef</td>
+             </tr>
+             <tr>
+                 <td>char</td>
+                 <td>extern</td>
+                 <td>return</td>
+                 <td>union</td>
+             </tr>
+             <tr>
+                 <td>const</td>
+                 <td>float</td>
+                 <td>short</td>
+                 <td>unsigned</td>
+             </tr>
+             <tr>
+                 <td>continue</td>
+                 <td>for</td>
+                 <td>signed</td>
+                 <td>void</td>
+             </tr>
+             <tr>
+                 <td>default</td>
+                 <td>goto</td>
+                 <td>sizeof</td>
+                 <td>vokatile</td>
+             </tr>
+             <tr>
+                 <td>do</td>
+                 <td>if</td>
+                 <td>static</td>
+                 <td>while</td>
+             </tr>
+             </table><hr><br><br><br>
+        
+        <h3>scanf();</h3>
+        <p>In C-programming scanf() is used to take input from the user. In double quotes the format-specifier is declared then outside the double quotes the variableName followed by comma[ , ] and the ampersand symbol[ & ].</p>
+        <mark>ampersand[ & ] is a symbol used in scanf to determine the address of the variable in the computer's memory.</mark>
+        <h4>scanf(" %formatSpecifier ", &variableName);</h4>
+        <hr>      
+        <table border="5px"cellpadding="10">
+            <tr>
+                <td>#include< stdio.h ><br>void main()<br>{<br><br>int var1;<br>float var2;<br>char var3;<br>scanf(" %d ",&var1);<br> scanf(" %f ",&var2);<br>scanf(" %c ",&var3);<br>printf("integer value = %d \nfloat value = %f \ncharacter value = %c",var1,var2,var3);<br><br>}<br><br></td>
+                <td>
+                    <h4>output</h4>
+                    56<br>
+                    23.46<br>
+                    A<br><br>
+                    integer value = 56<br>
+                    float value = 23.46<br>
+                    character value = A
+                </td>
+            </tr>
+        </table><hr><br><br><br>
+        
+        <h3 id="formatSpecifier">Format specifiers</h3>
+        <p>format specifiers are special characters followed by <mark>%</mark> symbol to determine the datatype of the variable in the printf() and scanf() functions.</p>
+        <table border="5px double green" cellspacing="0" width="300px" style="text-align:center;">
+            <tr>
+                <th>specifier</th>
+                <th>datatype</th>
+            </tr>
+            <tr>
+                <td>%d</td>
+                <td>integer</td>
+            </tr>
+            <tr>
+                <td>%f</td>
+                <td>float</td>
+            </tr>
+            <tr>
+                <td>%c</td>
+                <td>character</td>
+            </tr>
+            <tr>
+                <td>%s</td>
+                <td>string</td>
+            </tr>
+            <tr>
+                <td>%u</td>
+                <td>unidentified</td>
+            </tr>
+        </table><hr><br><br><br>
+        
+        <h3>ASCII code</h3>
+        <p>ASCII stands for <b>American Standard Code for Information Interchange</b>. It is a character encoding standard that uses numeric codes to represent characters. In ASCII, each character is assigned a unique number between 0 and 127. Common characters, such as letters, digits, and punctuation marks, have specific ASCII codes. </p>
+        <table cellspacing="8">
+            <tr>
+        <td><table border="5px" cellpadding="5" id="a">
+            <tr>
+                <td>A = 65</td>
+                <td>B = 66</td>
+                <td>C = 67</td>
+            </tr>
+            <tr>
+                <td>D = 68</td>
+                <td>E = 69</td>
+                <td>F = 70</td>
+            </tr>
+            <tr>
+                <td>G = 71</td>
+                <td>H = 72</td>
+                <td>I = 73</td>
+            </tr>
+            <tr>
+                <td>J = 74</td>
+                <td>K = 75</td>
+                <td>L = 76</td>
+            </tr>
+            <tr>
+                <td>M = 77</td>
+                <td>N = 78</td>
+                <td>O = 79</td>
+            </tr>
+            <tr>
+                <td>P = 80</td>
+                <td>Q = 81</td>
+                <td>R = 82</td>
+            </tr>
+            <tr>
+                <td>S = 83</td>
+                <td>T = 84</td>
+                <td>U = 85</td>
+            </tr>
+            <tr>
+                <td>V = 86</td>
+                <td>W = 87</td>
+                <td>X = 88</td>
+            </tr>
+            <tr>
+                <td>Y = 89</td>
+                <td>Z = 90</td>                
+            </tr>
+        </table>
+        </td>
+        <td>
+            <table border="5px" cellpadding="5" id="a">
+            <tr>
+                <td>a = 97</td>
+                <td>b = 98</td>
+                <td>c = 99</td>
+            </tr>
+            <tr>
+                <td>d = 100</td>
+                <td>e = 101</td>
+                <td>f = 102</td>
+            </tr>
+            <tr>
+                <td>g = 103</td>
+                <td>h = 104</td>
+                <td>i = 105</td>
+            </tr>
+            <tr>
+                <td>j = 106</td>
+                <td>k = 107</td>
+                <td>l = 108</td>
+            </tr>
+            <tr>
+                <td>m = 109</td>
+                <td>n = 110</td>
+                <td>o = 111</td>
+            </tr>
+            <tr>
+                <td>p = 112</td>
+                <td>q = 113</td>
+                <td>r = 114</td>
+            </tr>
+            <tr>
+                <td>s = 115</td>
+                <td>t = 116</td>
+                <td>u = 117</td>
+            </tr>
+            <tr>
+                <td>v = 118</td>
+                <td>w = 119</td>
+                <td>x = 120</td>
+            </tr>
+            <tr>
+                <td>y = 121</td>
+                <td>z = 122</td>                
+            </tr>
+        </table>
+        </td>
+        </tr>
+        </table>
+        <p>It is used by input devices to find out what the user want to input and then these values are converted in binary/octal/hexadecimal/or any number system based on the machine preference. <mark>( any electronic device only understand machine language so direct tell them about words,symbols is imposssible, these ASCII values acts as a bridge between user and machine.)</mark></p><hr><br><br><br>
+    </body>
+                                                                                                                                                                                                            </html>
+  
